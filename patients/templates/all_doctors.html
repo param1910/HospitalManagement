@@ -1,0 +1,53 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+{%load static%}
+<style>
+    .del_btn:hover{
+        background: red !important;
+    }
+    .add_btn:hover{
+        background: lightgreen !important;
+    }
+</style>
+
+
+    <style>thead,td{border: 3px solid lightgreen;}</style>
+    <style>table{border: 3px solid black;}</style>
+    
+
+    <div style="padding-top: 5rem;padding-bottom: 2rem;">
+        <h1 style="font-weight: bold; text-align: center; text-transform: uppercase; letter-spacing: 4px;background: lightgreen;color: #fff;padding: 5px;">Doctors</h1>
+    </div>
+
+    <table style="width: 100%;">
+        <thead style="text-align: center; font-weight:bold">
+            <tr style="height: 40px;">
+                <th>Doctor Name</th>
+                <th>Specialization</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody style="text-align: center;">
+            {%for doctor in doctors%}
+            <tr style="height: 40px;">
+                <td>{{doctor.name}}</td>
+                <td>{{doctor.specialization}}</td>
+                <td><form action="/doctors/{{doctor.id}}/delete" method="post">
+                    {%csrf_token%}
+                    <button type="submit" style="background: #fff;border-radius: 15px;border: 3px solid red;padding-left: 10px;padding-right: 10px;"class="del_btn">Delete</button>
+                </form></td>
+            </tr>
+            {%endfor%}
+            <tr style="height: 40px;">
+                <form action="/doctors/add" method="post">
+                    {%csrf_token%}
+                    <td><input type="text" placeholder="Enter Doctor Name" name="doctor_name" required style="text-align: center;background: #fff;border-radius: 15px;border: 2px solid black;padding-left: 10px;padding-right: 10px;"></td>
+                    <td><input type="text" placeholder="Specialization" name="specialization" required style="text-align: center;background: #fff;border-radius: 15px;border: 2px solid black;padding-left: 10px;padding-right: 10px;"></td>
+                    <td><button type="submit" style="background: #fff;border-radius: 15px;border: 5px solid lightgreen;padding-left: 10px;padding-right: 10px;"class="add_btn">Add</button></td>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+
+{%endblock maincontent%}

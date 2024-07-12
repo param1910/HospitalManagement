@@ -1,0 +1,27 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+{%load static%}    
+    <div class="container" style="padding-top: 5rem;">
+
+        <div class="logo">
+            <img src="{% static 'Icons/admin.png'%}" class="logo" width="50%">
+        </div>
+
+        <div class="content">
+
+            <h1 style="padding-top: 1rem;padding-bottom:-.1rem;">Sign Up</h1>
+            <form method="post">
+            {%csrf_token%}
+                    <input type="text" placeholder="First name" class="box" required name="first_name">
+                    <input type="text" placeholder="last name" class="box" required name="last_name">
+                    <input type="email" placeholder="email" class="box" required name="email">
+                    <input type="text" placeholder="username" class="box" required name="username">
+                    <input type="password" placeholder="password" class="box" required name="password">
+                    <input type="submit" value="Sign Up" class="btn">
+            </form>
+
+        </div>
+
+    </div>
+
+{%endblock maincontent%}

@@ -1,0 +1,167 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+{%load static%}
+
+<style>
+    .app_btn:hover{
+        background-color: lightgreen !important;
+    }
+</style>
+
+    <div style="padding-top: 5rem;width: 100%;padding-bottom: 2rem;">
+        <h1 style="text-transform: uppercase;background: lightgreen;width: 100%;padding: 1rem;text-align: center;color: #fff;">Doctors</h1>
+    </div>
+
+    <div>
+
+        <div  style="display: flex;padding-bottom: 2rem;"> 
+            <img src="{% static 'Images/doct2.jpeg'%}" width="100px">
+            <div style="display: grid;padding-left: 9rem;">
+                <h1 style="font-size: 25px;">DR. ABHISHEK GUPTA</h1>
+                <div style="display: flex;padding-top: 2rem;">
+                    <h3 style="font-size: 20px;padding-top: 2px;">Department - <span>Neurosciences</span></h3>
+                    <div style="padding: 1rem;padding-left: 24.5rem;">
+                        <a href="/booking"><input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>               
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+    
+
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/doct3.jpeg'%}" width="10%">
+            <div style="display: grid;padding-left: 9rem;">
+                <h1 style="font-size: 25px;">DR. AKASH MEHTA</h1>
+                <div style="display: flex;padding-top: 2rem;">
+                    <h3 style="font-size: 20px;padding-top: 2px;">Department - <span>Liver Transplant</span></h3>
+                    <div style="padding: 1rem;padding-left: 22rem;">
+                        <a href="/booking"><input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+
+
+
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/doct1.jpg'%}" width="10%" >
+            <div style="display: grid;padding-left: 9em;">
+                <h1 style="font-size: 25px;">DR. MEHAK KAUR</h1>
+
+                <div style="display: flex;">
+                    <h3 style="font-size: 20px;padding-top: 2rem;">Department - <span>Gastroenterology</span></h3>
+                    <div style="padding: 1rem;padding-left: 21rem;">
+                        <a href="/booking"><input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+
+
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/Doc-5.jpg'%}" width="10%">
+            <div style="display: grid;padding-left: 9em;">
+                <h1 style="font-size: 25px;">DR. GURLEEN KAUR</h1>
+                <div style="display: flex;padding-top: 2rem;">
+                    <h3 style="font-size: 20px;padding-top: 2px;">Department - <span>Orthopaedics & Joint Replacement</span></h3>
+                    <div style="padding: 1rem;padding-left: 11rem;">
+                       <a href="/booking"> <input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+
+
+    
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/Doc-1.jpg'%}" width="10%">
+            <div style="display: grid;padding-left: 9em;">
+                <h1 style="font-size: 25px;">DR. PARAMPREET</h1>
+                <div style="display: flex;">
+                    <h3 style="font-size: 20px;padding-top: 2rem;">Department - <span>Cardiology & CTVS</span></h3>
+                    <div style="padding: 1rem;padding-left: 20rem;">
+                        <a href="/booking"><input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+
+
+    
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/Doc-3.jpg'%}" width="10%">
+            <div style="display: grid;padding-left: 9rem;">
+                <h1 style="font-size: 25px;">DR. YASHIKA MAHAJAN</h1>
+                <div style="display: flex;">
+                    <h3 style="font-size: 20px;padding-top: 2rem;">Department - <span>Eye Care</span></h3>
+                    <div style="padding: 1rem;padding-left: 26rem;">
+                       <a href="/booking"> <input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%" style="height: 4px;background: black;">
+
+
+
+    
+    <div>
+
+        <div style="display: flex;padding-bottom: 2rem; padding-top: 1rem;"> 
+            <img src="{% static 'Images/Doc-4.jpg'%}" width="10%">
+            <div style="display: grid;padding-left: 9rem;">
+                <h1 style="font-size: 25px;">DR. HEMANT KUMAR</h1>
+                <div style="display: flex;">
+                    <h3 style="font-size: 20px;padding-top: 2px;">Department - <span>Dentist</span></h3>
+                    <div style="padding: 1rem;padding-left: 27rem;">
+                        <a href="/booking"><input type="submit" value="Make a Appointment" class="app_btn" style="padding: 8px; background: #fff;border: 5px solid lightgreen; border-radius: 15px;font-weight: bold;"></a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <hr width="100%"style="height: 4px;background: black;">
+
+
+
+{%endblock maincontent%}

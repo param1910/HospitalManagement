@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/edit.css'%}">
+</head>
+<body>
+    
+<section class="book" id="booking">
+
+    <h1 class="heading" style="font-weight: bold; text-align: center; text-transform: uppercase; letter-spacing: 4px;">Appointment</h1>
+
+    <div class="row">
+
+        <form action="/appointment/{{appointment.id}}/edit" method="post">
+            {%csrf_token%}
+            <input value="{{appointment.name}}" type="text " placeholder="Your Name" class="box" name="name" >
+            <input value="{{appointment.age}}" type="number" placeholder="Your Age" class="box" name="age"  >
+            <input value="{{appointment.phone_number}}" type="number" placeholder="Phone Number" class="box" name="phone_number">
+            <input value="{{appointment.email}}" type="email" placeholder="Your Email" class="box" name="email">
+            <input value="{{appointment.date | safe}}" type="date" class="box" name="date">
+            <input type="submit" value="Save" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+
+
+</body>
+</html>

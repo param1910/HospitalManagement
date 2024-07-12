@@ -1,0 +1,69 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+{%load static%}
+
+    <section class="about">
+        
+       <div class="heading">
+            <h1 class="heading" style="font-size:2rem; text-align: center; background: lightgreen; color:#fff; font-weight: bold;padding: 5px;">About Us</h1>
+       </div>
+
+        <div class="container" style="display: flex;">
+            
+            <div>
+                <img src="{% static 'Icons/hospital1.png'%}" style="padding-left: 5px;" width="400px">
+            </div>
+            <div>
+                <p style="padding-top: 2rem; padding-left: 5rem; font-size: 1rem;">With a vision to provide the utmost level of healthcare to the common man, at the most affordable cost, Dr. Purshotam Lal (Padma Vibhushan, Padma Bhushan and Dr. B.C. Roy National Awardee), a pioneer ofInterventional Cardiology in India, founded Metro Group of Hospitals.
+                    
+                    India’s large and diverse population warrants an efficient health care infrastructure that should be accessible to all strata’s of society. Good quality health care should not be a privilege of the elite only. Metro Group of Hospitals was setup in 1997 by Padma Vibhushan and Dr. B C Roy National Awardee Dr. Purshotam Lal (Chairman), with the vision and endeavours to bring the best possible health care to the masses of India. In order to achieve this, Metro Group of Hospitals has evolved as a committed group which provides advanced medical care at much affordable prices. Their focus has always been on the patients of the lower and middle sections of society, patients who are rejected by the large corporate hospitals, and who cannot afford expensive medical care but definitely deserve empathy. They believe that medicine is a noble profession and sick must not be rejected on monetary grounds.
+                    
+                    Metro Group of Hospitals is a group of 11 hospitals and 1 college (Metro College of Health Sciences and Research), having more than 2500 beds flourishing hospitals and leading one of the biggest group of hospitals in India, out of which 10 are NABH Accredited (NABH – is the highest accreditation body in India) and 4 are NABL Accredited (NABL is the highest body for the accreditation of laboratory services).
+                    Metro Group of Hospitals has an outstanding and recognized team of doctors led by Dr. Purshotam Lal in all specialities including Cardiology, Gastroenterology, Nephrology, Respiratory, Oncology, Orthopaedics Joint replacement, Gastro and Bariatric Surgery, Neurology and Neurosurgery etc. All their senior doctors are former deans, professors or directors of reputed institutes. It is a matter of great pride that they, at Metro, have created a facility and an atmosphere of team-work and cross-opinions with all related doctors and these inputs and discussions shared between many scientific minds greatly benefit their patients. They continue to be a leader in the industry for the personal approach they take with every patient. Their professional team provides exceptional service and employs the highest standards of patient care. Many hospitals across the country refer their most difficult cases to Metro Group of Hospital. This is a true testimony to the skill and knowledge of Dr. Purshotam Lal and his professional team.</p>
+                
+        
+            </div>
+
+
+        </div>
+        
+    </section>
+    
+<!----------content section starts---------->
+
+    <section>
+        
+        
+        <div class="box-container" style="display: flex; ">
+
+            <div class="box">
+                <h3>Our Vision</h3>
+                <img src="{% static 'Icons/eye.png'%}" width="75px" class="logo">
+                <p>Our vision is to achieve excellence in Healthcare services by offering unique expertise, state of the art technology patient care. Metro Group of Hospitals is committed in providing world class health care.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Our Mission</h3>
+                <img src="{% static 'Icons/target.png'%}" width="75px" class="logo">
+                <p>Our immediate agenda is to set up more such dedicated centres for providing wholesome treatment to patients from all over the country and abroad. We are committed to continuing to serve humanity.</p>
+            </div>
+
+            <div class="box">
+                <h3>Our Values</h3>
+                <img src="{% static 'Icons/handshake.png'%}" width="75px" class="logo">
+                <p style="padding-left: 4rem;padding-right: 4rem;">5 Pillars of Excellence</p>
+                <ul>
+                    <li>Transparency</li>
+                    <li>Affordability</li>
+                    <li>Trust</li>
+                    <li>Patient Care</li>
+                    <li>Commitment</li>
+                </ul>
+            </div>
+
+
+    </section>
+
+
+{%endblock maincontent%}

@@ -1,0 +1,18 @@
+.heading{
+    padding-top: 4rem;
+}
+.content .box-container .box{
+    background: #fff;
+    border: 5px solid black;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.content .box-container .box h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content .box-container .box .logo{
+    padding-bottom: 1rem;
+}

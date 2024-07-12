@@ -1,0 +1,43 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+{%load static%}
+
+    <section class="book" id="booking">
+
+        <h1 class="heading" style="letter-spacing: 4px;">Appointment</h1>
+
+        <div class="row">
+            
+            <div class="image">
+                <img src="{% static 'Images/injury-amico.svg'%}">
+            </div>
+
+            <form action="/book-appointment" method="post">
+                {%csrf_token%}
+                <h3>Book Appointment</h3>
+                <input type="text " placeholder="Your Name" class="box" name="name" required style="width: 300px;">
+                <input type="number" placeholder="Your Age" class="box" name="age" required maxlength="3">
+                <input type="number" placeholder="Phone Number" class="box" name="phone_number" required maxlength="10">
+                <input type="email" placeholder="Your Email" class="box" name="email">
+                <select class="box" name="doctor" required>
+                    <option value="null" selected>Select Doctor</option>
+                    {%for doctor in doctors%}
+                    <option value="{{doctor.id}}">{{doctor.name}}</option>
+                    {%endfor%}
+                </select>
+                <textarea type="text" placeholder="Reason" class="box" name="treatment_for"></textarea>
+                <input type="date" class="box" name="date">
+                {%if request.user.is_authenticated%}
+                <input type="submit" value="Book Now" class="btn2">
+                {%else%}
+                <button type="submit"  class="btn2" style="cursor: no-drop;">Book Now</button>
+                <p style="padding-top: 2rem;font-weight: bold;"><a href="/login">Login</a> required</p>
+                {%endif%}
+            </form>
+
+        </div>
+
+    </section>
+
+
+{%endblock maincontent%}

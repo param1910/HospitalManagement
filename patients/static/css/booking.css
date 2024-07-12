@@ -1,0 +1,57 @@
+.book h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(8, 146, 109, 0.982);
+    text-shadow: 0 0px 1px black;
+    font-size: 2rem;
+}
+
+
+.book .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.book .row .image img{
+    width: 40rem;
+}
+
+.book .row form{
+    background: #fff;
+    border: 5px solid lightgreen;
+    text-align: center;
+    padding:4rem;
+    border-radius: .5rem;
+}
+
+.book .row .btn2{
+    border: 5px solid lightgreen;
+    background: #fff;
+    border-radius: .5rem;
+    padding: 5px;
+}
+
+.book .row form h3{
+    color: black;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 1px black;
+}
+
+.book .row form .box{
+    width: 100%;
+    margin: 2rem 0;
+    border: 5px solid lightgreen;
+    border-radius: .5rem;
+    padding:5px;
+    font-size: 1rem;
+}
+
+.book .row form .btn2{
+    padding: 1rem 3rem;
+}
+
+.book .row form .btn2:hover{
+    background: lightgreen;
+}

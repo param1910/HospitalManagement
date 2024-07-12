@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="/fontawesome.com">
+    <style>
+        .header .navbar a:hover{
+            color:lightgreen !important;
+            padding:3px;
+        }
+        .header .navbar a{
+            color:black;
+        }
+        #book_appointment_btn:hover{
+            background-color: lightgreen;
+            color:white !important;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        
+        <div class="logo">
+            <img src="{% static 'Icons/icons8-hospital-48.png' %}" class="logo">
+            <h1>Medicare</h1>
+        </div>
+        
+        <nav class="navbar">
+            <a href="" style="color: black;">Home</a>
+            <a href="/specialities" style="color: black;">Specialities</a>
+            <a href="/doctors" style="color: black;">Doctors</a>
+            {%if request.user.is_authenticated%}
+            <a href="/logout" style="color: black;">logout</a>
+            {%else%}
+            <a href="/login" style="color: black;">login</a>
+            <a href="/signup" style="color: black;">Sign up</a>
+            {%endif%}
+            <a href="/booking" style="color: black;">Book Appointment</a>
+            <a href="/about-us" style="color: black;">About</a>
+            {%if request.user.is_authenticated%}
+            {%if request.user.is_superuser%}
+            <a href="/show-appointments" style="color: black;">Appointment History</a>
+            {%else%}
+            <a href="/user-appointments" style="color: black;">Appointment History</a>
+            {%endif%}
+            {%endif%}
+            
+            
+            
+        </nav>
+
+    </header>
+
+<!----------home section starts---------->
+
+    <section class="home" id="home">
+
+        <div class="container">
+        <div class="image">
+            <img src="{% static 'Images/Hospital bed-bro.png'%}" class="image" id="main_image">
+        </div>
+
+        <div class="content">
+            <h3>Stay Safe, Stay Healthy</h3>
+            <p>The aim of a hospital is to provide high-quality medical care to patients who are sick, injured or requiring medical attention. The primary objective of a hospital is to promote good health, alleviate suffering and save lives. It aims to achieve this by delivering a wide range of healthcare services, including diagnosis, treatment, rehabilitation, and prevention of diseases.</p>
+            <a href="#booking" class="btn1" style="color: black; margin-left: 14rem;" id="book_appointment_btn">Book Appointment</a>
+        </div>
+        </div>
+    </section>
+
+
+<!----------service section starts-------->
+
+    <section class="services" id="services">
+        <h1 class="heading">Our Services</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'Icons/health-check.png'%}" width="75px">
+                <h3>Free checkups</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'Icons/ambulance.png'%}" width="75px">
+            <h3>24/7 Ambulance</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+
+        </div>
+
+        <div class="box">
+            <img src="{% static 'Icons/doctor.png'%}" width="75px">
+            <h3>Expert Doctors</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'Icons/drug.png'%}" width="75px">
+            <h3>Medicines</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'Icons/hospital-bed.png'%}" width="75px">
+            <h3>Bed facility</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'Icons/cardiogram.png'%}" width="75px">
+            <h3>Total care</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae error maiores temporibus doloribus impedit?</p>
+        </div>
+    </div>
+    </section>
+
+<!----------About section starts--------->
+
+    <section class="about" id="about">
+        
+        <h1 class="heading">about us</h1>
+        
+        <div class="row">
+            <div class="contain">
+                <div class="image">
+                    <img src="{% static 'Images/Doctors-bro.png' %}" class="image">
+                </div>
+
+                <div class="content">
+                    <h3>We take care of your health life</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum debitis, perspiciatis, ex nihil reprehenderit ratione ipsum aperiam, ducimus fugit possimus a! Enim ut perspiciatis temporibus nemo nihil voluptatum rerum nisi quia unde, sint labore, maiores maxime repudiandae vel cupiditate? Voluptatem, nisi inventore deleniti architecto aut iusto cumque saepe incidunt! Similique et libero ut voluptas facilis labore suscipit alias, doloremque pariatur unde possimus quaerat quisquam autem, ad minus aperiam. Quisquam alias inventore repudiandae repellendus fugit neque commodi! Quia nesciunt sunt fugiat expedita, voluptatibus, nisi itaque omnis sed consequuntur perspiciatis, repudiandae quidem ducimus accusamus praesentium id eaque sequi illum ad quae!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!----------Doctor section starts---------->
+
+    <section class="doctor" id="doctor">
+        
+        <h1 class="heading">our Doctors</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="{% static 'Images/Doc-1.jpg'%}" width="80%">
+                <h3>Dr. John Deo</h3>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Images/Doc-2.jpg'%}" width="80%">
+                <h3>Dr. Bravo</h3>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Images/Doc-3.jpg'%}" width="80%">
+                <h3>Dr. Mehak Sandhu</h3>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Images/Doc-5.jpg'%}" width="80%">
+                <h3>Dr. Gurleen Kaur</h3>
+            </div>
+        </div>
+
+    </section>
+
+<!----------Booking section starts---------->
+
+    <section class="book" id="booking">
+
+        <h1 class="heading" style="letter-spacing: 4px;">Appointment</h1>
+
+        <div class="row">
+            
+            <div class="image">
+                <img src="{% static 'Images/injury-amico.svg'%}" alt="">
+            </div>
+
+            <form action="/book-appointment" method="post">
+                {%csrf_token%}
+                <h3>Book Appointment</h3>
+                <input type="text " placeholder="Your Name" class="box" name="name" required>
+                <input type="number" placeholder="Your Age" class="box" name="age" required maxlength="3">
+                <input type="number" placeholder="Phone Number" class="box" name="phone_number" required maxlength="10">
+                <input type="email" placeholder="Your Email" class="box" name="email">
+                <select class="box" name="doctor" required>
+                    <option value="null" selected>Select Doctor</option>
+
+                    {%for doctor in doctors%}
+                    <option value="{{doctor.id}}">{{doctor.name}}</option>
+                    {%endfor%}
+                </select>
+                <textarea type="text" placeholder="Reason" class="box" name="treatment_for"></textarea>
+                <input type="date" class="box" name="date">
+                {%if request.user.is_authenticated%}
+                <input type="submit" value="Book Now" class="btn2">
+                {%else%}
+                <button type="submit"  class="btn2" style="cursor: no-drop;">Book Now</button>
+                <p style="padding-top: 2rem;font-weight: bold;"><a href="/login">Login</a> required</p>
+                {%endif%}
+            </form>
+
+        </div>
+
+    </section>
+
+<!----------Footer section starts---------->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+
+                <h3>Quick Links</h3>
+                <a href="/" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%"> Home</a>
+                <a href="/specialities" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%"> Specialities</a>
+                <a href="/doctors" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%"> Doctors</a>
+                <a href="/login" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%"> Login</a>
+                <a href="/signup" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%">Sign Up</a>
+                <a href="/booking" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%">Book Appointment</a>
+                <a href="/about-us" style="color: black;"><img src="{% static 'Icons/next.png'%}" width="3%"> About</a>
+            </div>
+
+        <div class="box">
+
+            <h3>Our Services</h3>
+
+            <ul>
+                <li>Free checkups</li>
+                <li>24/7 Ambulance</li>
+                <li>Expert Doctors</li>
+                <li>Medicines</li>
+                <li>Bed facility</li>
+                <li>Total care</li>
+            </ul>
+
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <p>+123-456-7890</p>
+            <p>111-222-3339</p>
+        </div>
+
+    </div>
+
+
+    </section>
+
+    
+</body>
+</html>

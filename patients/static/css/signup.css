@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+}
+.content h1{
+    text-align: center; 
+}
+
+.content form{
+    text-align: center;
+}
+.content{
+    border: 5px solid black;
+    border-radius: 5rem;
+}
+
+.content .btn{
+    border: 5px solid black;
+    background: #fff;
+    border-radius: .5rem;
+    padding: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.content form{
+    display: grid;
+    gap: 2rem;
+    padding:4rem;
+}
+
+.content form .box{
+    font-size: 1rem;
+}
+
+.container .logo{
+    padding: 2rem;
+    width: 50%;
+}
+
+.container .content .box{
+    padding: 5px;
+    border: 5px solid lightgreen;
+    border-radius: 5px;
+}
+
+.container .content .button{
+    padding-top: 2rem;
+}
+
+.btn:hover{
+    background: lightgreen;
+}

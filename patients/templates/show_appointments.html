@@ -1,0 +1,73 @@
+{%extends 'master.html'%}
+{%block maincontent%}
+    <style>table,thead,td{border: 3px solid lightgreen;}
+        #delete_button{
+            background: #fff;border-radius: 15px;border: 3px solid red;padding-left: 10px;padding-right: 10px;
+        }
+        #delete_button:hover{
+            color:white;
+            background-color: red;
+            cursor: pointer;            
+        }
+        #edit_button{
+            background: #fff;border-radius: 15px;border: 3px solid lightgreen;padding-left: 10px;padding-right: 10px;
+        }
+        #edit_button:hover{
+            background-color:lightgreen;
+            color:white;
+            cursor: pointer;            
+        }
+    </style>
+<div style="padding-top: 100px;padding-bottom: 6rem;">
+
+    <div style="padding-bottom: 2rem;">
+        <h1 style="font-weight: bold; text-align: center; text-transform: uppercase; letter-spacing: 4px;background: lightgreen;color: #fff;padding: 5px;">Appointments</h1>
+    </div>
+
+
+    <div class="Search" style="margin-left: 62rem;">
+            <form style="padding-bottom: 2rem;">
+                {%if query%}
+                    <input type="text" name="query" class="box" style="border: 3px solid black; border-radius: 5px;" value="{{query}}">
+                    {%else%}
+                    <input type="text" style="border: 3px solid black; border-radius: 5px;" name="query" class="box">
+                    {%endif%}
+                <button style="background: lightgreen; border: 5px solid lightgreen; border-radius: 5px;padding: 3px; font-weight: bold;">Search</button>
+            </form>
+
+    </div>
+
+    <table style="width: 100%;">
+        <thead style="text-align: center; font-weight: bold;">
+            <tr style="height: 40px;">
+                <td>User Name</td>
+                <td>Phone Number</td>
+                <td>Email</td>
+                <td>Date</td>
+                <td>Doctor Name</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead> 
+        <tbody style="text-align: center;">
+            {%for appointment in appointments%}
+            <tr style="height: 40px;">
+                <td>{{appointment.name}}</td>
+                <td>{{appointment.phone_number}}</td>
+                <td>{{appointment.email}}</td>
+                <td>{{appointment.date}}</td>
+                <td>{{appointment.doctor.name}}</td>
+                <td>
+                    <form action="/appointment/{{appointment.id}}/delete" method="post">
+                        {%csrf_token%}                    
+                        <button id="delete_button">Delete</button>
+                    </form>
+                </td>
+                <td><a href="/appointment/{{appointment.id}}/edit"><button style="" id="edit_button">Edit</button></a></td>
+            </tr>
+
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+{%endblock maincontent%}
